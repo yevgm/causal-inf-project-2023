@@ -88,6 +88,7 @@ def preprocess_data_waged(raw_data):
             y = X['Y']
             X = X.drop(columns=['Y'])
             data_subsets.append((X, y, val))
+            print(val, X['T'].sum())
 
     return data_subsets, data
 
